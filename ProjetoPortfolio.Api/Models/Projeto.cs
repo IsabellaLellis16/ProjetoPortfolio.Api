@@ -1,0 +1,16 @@
+﻿using System.Text.Json.Serialization;
+
+namespace ProjetoPortfolio.Api.Models
+{
+    public class Projeto
+    {
+        public int Id { get; set; }
+        public string Descricao { get; set; }
+        public string Titulo { get; set; }
+        public string Link { get; set; }
+        public int AlunoId { get; set; }
+
+        [JsonIgnore]
+        public Aluno? Aluno { get; set; }
+    }
+}

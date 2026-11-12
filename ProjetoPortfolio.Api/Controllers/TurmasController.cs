@@ -28,7 +28,7 @@ namespace ProjetoPortfolio.Api.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> CadastrarTurma(Turma turma)
+        public async Task<IActionResult> CadastrarTurmas(Turma turma)
         {
             _context.Turmas.Add(turma);
             await _context.SaveChangesAsync();
@@ -56,7 +56,7 @@ namespace ProjetoPortfolio.Api.Controllers
             await _context.SaveChangesAsync();
 
 
-            return Ok("Turma alterada com sucesso");
+            return Ok("Dados da turma alterados com sucesso");
         }
 
 
