@@ -1,0 +1,15 @@
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoPortfolio.Api.Models;
+
+
+namespace ProjetoPortfolio.Api.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<Turma> Turmas { get; set; }
+    }
+}
